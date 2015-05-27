@@ -2,12 +2,8 @@
     var saveButton = document.querySelector('#save');
     saveButton.addEventListener('click', function () {
         function store(location) {
-            var newItem = document.createElement('li');
-            newItem.textContent = ' - ' + location;
-            notes.appendChild(newItem);
-
-            notes.classList.remove('no-items');
-          
+            $('#coordinates').html(location);
+            coordinates.classList.remove('no-items');
         }
 
         if ('geolocation' in navigator) {
